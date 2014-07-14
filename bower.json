@@ -1,0 +1,11 @@
+{
+  "name": "Franziska",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "font-awesome": "~4.1.0",
+    "jQuery-Parallax": "1.1.3",
+    "jquery.localScroll": "~1.3.5",
+    "jquery.inview": "~1.0.0",
+    "jquery.easing": "~1.3"
+  }
+}

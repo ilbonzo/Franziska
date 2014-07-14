@@ -1,0 +1,113 @@
+/* all app scss styles here */
+
+//Header
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+#header-container {
+    padding: 0;
+    nav {
+        #main-menu {
+            .active a{
+                background-color: #ccc;
+            }
+        }
+    }
+}
+
+
+#main-container {
+    .photo-bg {
+        box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.9);
+    }
+}
+.black-bg {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 12px;
+    color: #ccc;
+}
+
+.white-bg {
+    background-color: white;
+    padding: 12px;
+    color: #000;
+}
+
+
+
+//porting to sass
+.float-left{
+    float: left;
+    margin: 0 0 0 20px;
+}
+
+.float-right{
+    float: right;
+    margin: 0 20px 0 0;
+}
+
+#first{
+    background: url(../images/first.jpg) 50% 0 no-repeat fixed;
+    background-size: cover;
+    height: 800px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+
+#second {
+    background: url(../images/second.jpg) 50% 0 no-repeat fixed;
+    background-size: cover;
+    height: 800px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+
+    /*.bg{
+        background: url(../images/europe.png) 100% 10% no-repeat fixed;
+        height: 620px;
+        margin: 100px auto 0 auto;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 200;
+    }*/
+
+}
+
+#third {
+    background: url(../images/third.jpg) 50% 0 no-repeat fixed;
+    background-size: cover;
+    height: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 100px 0 0 0;
+}
+
+#fourth {
+    background: url(../images/fourth.jpg) 50% 0 no-repeat fixed;
+    background-size: cover;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 800px;
+    padding: 100px 0 0 0;
+}
+
+#fifth{
+    background: url(../images/fifth.jpg) 50% 0 no-repeat fixed;
+    background-size: cover;
+    height: 400px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+
+
+.story{
+    overflow: auto;
+    z-index: 100;
+}
+
+.story .float-left, .story .float-right{
+    position: relative;
+    width: 350px;
+}
