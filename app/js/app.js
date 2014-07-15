@@ -24,12 +24,12 @@ var app = (function(document, $) {
             //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
             //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
 
-            $('#first').parallax("50%", 0, 0.1);
-            $('#second').parallax("50%", 0, 0.1);
-            $('.bg').parallax("100%", 0, 0.4, true);
-            $('#third').parallax("50%", 0, 0.3);
-            $('#fourth').parallax("50%", 0, 0.3);
-            $('#fifth').parallax("50%", 0, 0.3);
+            $('#first').parallax('50%', 0, 0.1);
+            $('#second').parallax('50%', 0, 0.1);
+            $('.bg').parallax('100%', 0, 0.4, true);
+            $('#third').parallax('50%', 0, 0.3);
+            $('#fourth').parallax('50%', 0, 0.3);
+            $('#fifth').parallax('50%', 0, 0.3);
 
             $('#main-title').localScroll({hash:true, offset: 10, duration:1200, easing: 'easeInExpo'});
             $('#main-menu').localScroll({hash:true, offset: -44, duration:1000, easing: 'easeInExpo'});
@@ -39,6 +39,14 @@ var app = (function(document, $) {
                 var pos = $(elementID).offset().top - 44;
                 $.scrollTo(pos);
                 return false;
+            });
+
+            $('#first, #second, #third, #fourth, #fifth').bind('inview', function (event, visible) {
+                if (visible === true) {
+                    $(this).addClass('inview');
+                } else {
+                    $(this).removeClass('inview');
+                }
             });
         };
 
