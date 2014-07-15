@@ -2,7 +2,6 @@
   "name": "zf5_project",
   "description": "",
   "version": "0.0.1",
-  "description": "",
   "homepage": "",
   "author": {
     "name": "",
@@ -28,6 +27,7 @@
     "grunt-wiredep": "~1.8.0",
     "grunt-usemin": "~2.3.0",
     "grunt-contrib-imagemin": "0.7.1",
-    "grunt-newer": "~0.7.0"
+    "grunt-newer": "~0.7.0",
+    "grunt-gh-pages": "~0.9.1"
   }
 }
