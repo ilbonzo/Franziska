@@ -7,6 +7,7 @@ var app = (function(document, $) {
             docElem.setAttribute('data-useragent', navigator.userAgent);
         },
         _init = function() {
+            Foundation.global.namespace = '';
             $(document).foundation();
             _userAgentInit();
 
@@ -41,13 +42,14 @@ var app = (function(document, $) {
                 return false;
             });
 
-            $('#first, #second, #third, #fourth, #fifth').bind('inview', function (event, visible) {
+            $('#first, #second, #third, #fourth, #fifth').on('inview', function (event, visible) {
                 if (visible === true) {
                     $(this).addClass('inview');
                 } else {
                     $(this).removeClass('inview');
                 }
             });
+
         };
 
     return {

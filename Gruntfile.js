@@ -153,6 +153,49 @@ module.exports = function(grunt) {
                 },
                 src: ['**']
             }
+        },
+
+        jasmine: {
+            components: {
+                src: [
+                    'app/js/*js'
+                ],
+                options: {
+                    specs: 'tests/spec/*Spec.js',
+                    keepRunner : true,
+                    //helpers: 'test/spec/*.js'
+                    vendor: [
+                        "app/bower_components/jquery/dist/jquery.js",
+                        "app/bower_components/fastclick/lib/fastclick.js",
+                        "app/bower_components/jquery.scrollTo/jquery.scrollTo.js",
+                        "app/bower_components/jquery.scrollTo/jquery.scrollTo.min.js",
+                        "app/bower_components/jquery.serialScroll/jquery.serialScroll.js",
+                        "app/bower_components/jquery.serialScroll/jquery.serialScroll.min.js",
+                        "app/bower_components/jQuery-Parallax/scripts/jquery.parallax-1.1.3.js",
+                        "app/bower_components/jquery.localScroll/jquery.localScroll.js",
+                        "app/bower_components/jquery.localScroll/jquery.localScroll.min.js",
+                        "app/bower_components/jquery.inview/jquery.inview.js",
+                        "app/bower_components/jquery.easing/js/jquery.easing.min.js",
+                        "app/bower_components/foundation/js/foundation/foundation.js",
+                        "app/bower_components/foundation/js/foundation/foundation.abide.js",
+                        "app/bower_components/foundation/js/foundation/foundation.accordion.js",
+                        "app/bower_components/foundation/js/foundation/foundation.alert.js",
+                        "app/bower_components/foundation/js/foundation/foundation.clearing.js",
+                        "app/bower_components/foundation/js/foundation/foundation.dropdown.js",
+                        "app/bower_components/foundation/js/foundation/foundation.equalizer.js",
+                        "app/bower_components/foundation/js/foundation/foundation.interchange.js",
+                        "app/bower_components/foundation/js/foundation/foundation.joyride.js",
+                        "app/bower_components/foundation/js/foundation/foundation.magellan.js",
+                        "app/bower_components/foundation/js/foundation/foundation.offcanvas.js",
+                        "app/bower_components/foundation/js/foundation/foundation.orbit.js",
+                        "app/bower_components/foundation/js/foundation/foundation.reveal.js",
+                        "app/bower_components/foundation/js/foundation/foundation.slider.js",
+                        "app/bower_components/foundation/js/foundation/foundation.tab.js",
+                        "app/bower_components/foundation/js/foundation/foundation.tooltip.js",
+                        "app/bower_components/foundation/js/foundation/foundation.topbar.js",
+                    ]
+                }
+            }
         }
 
     });
@@ -168,5 +211,7 @@ module.exports = function(grunt) {
     grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
 
     grunt.registerTask('deploy', ['publish', 'gh-pages:public']);
+
+    grunt.registerTask('travis', ['jasmine']);
 
 };
